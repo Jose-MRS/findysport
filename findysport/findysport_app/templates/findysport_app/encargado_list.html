@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Encargados</h1>
+<ul>
+    {% for encargado in object_list %}
+        <li>{{ encargado.nombre }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Actividades</h1>
+<ul>
+    {% for actividad in object_list %}
+        <li>{{ actividad.nombre }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}

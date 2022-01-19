@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Grupos</h1>
+<ul>
+    {% for grupo in object_list %}
+        <li>{{ grupo.nombre }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}

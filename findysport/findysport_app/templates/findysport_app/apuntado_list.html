@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Apuntados</h1>
+<ul>
+    {% for apuntado in object_list %}
+        <li>{{ apuntado.nombre }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}

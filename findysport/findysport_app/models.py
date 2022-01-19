@@ -27,10 +27,14 @@ class Actividad(models.Model):
     tipo = models.CharField(max_length=16)
     descripcion = models.CharField(max_length=200)
     creador = models.CharField(max_length=20)
+    def __str__(self):
+        return self.nombre
    
 class Encargado(models.Model):
     nombre_en = models.CharField(max_length=30)
     actividad = models.ManyToManyField(Actividad)
+    def __str__(self):
+        return self.nombre_en
 class Grupo(models.Model):
     actividad = models.ForeignKey(Actividad, on_delete=CASCADE)
     nombre = models.CharField(max_length=30)
@@ -38,11 +42,10 @@ class Grupo(models.Model):
     encargado = models.ForeignKey(Encargado, on_delete=CASCADE)
     espacio = models.IntegerField(default=0)
     espacio_max = models.IntegerField(default=15)
+    def __str__(self):
+        return self.nombre
 
 class Apuntado(models.Model):
     usuario = models.ForeignKey(Usuario, on_delete=CASCADE)
     actividad = models.ManyToManyField(Actividad)
     grupo = models.ForeignKey(Grupo, on_delete=CASCADE)
-
-   
-

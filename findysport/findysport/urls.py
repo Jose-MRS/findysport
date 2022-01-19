@@ -15,7 +15,20 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-
+from findysport_app.views import UsuarioListView, ActividadListView, LocalListView, EncargadoListView, ApuntadoListView, GrupoListView
+from findysport_app.views import UsuarioDetailView, ActividadDetailView, LocalDetailView, EncargadoDetailView, ApuntadoDetailView, GrupoDetailView
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('usuarios/', UsuarioListView.as_view(), name = "Usuario-list"),
+    path('actividades/', ActividadListView.as_view()),
+    path('locales/', LocalListView.as_view()),
+    path('encargados/', EncargadoListView.as_view()),
+    path('apuntados/', ApuntadoListView.as_view()),
+    path('grupos/', GrupoListView.as_view()),
+    path('usuario/<int:pk>/', UsuarioDetailView.as_view()),
+    path('actividad/<int:pk>/', ActividadDetailView.as_view()),
+    path('local/<int:pk>/', LocalDetailView.as_view()),
+    path('encargado/<int:pk>/', EncargadoDetailView.as_view()),
+    path('apuntado/<int:pk>/', ApuntadoDetailView.as_view()),
+    path('grupo/<int:pk>/', GrupoDetailView.as_view()),
 ]

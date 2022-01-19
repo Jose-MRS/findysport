@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Locales</h1>
+<ul>
+    {% for local in object_list %}
+        <li>{{ local.nombre_local }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
