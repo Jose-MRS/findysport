@@ -3,7 +3,9 @@
 <h1>Grupos</h1>
 <ul>
     {% for grupo in object_list %}
-        <li>{{ grupo.nombre }}</li>
+    <li>
+    <a href="{{ grupo.id }}"> {{grupo.nombre}}</a>
+    </li>
     {% endfor %}
 </ul>
 {% endblock %}

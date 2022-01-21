@@ -3,7 +3,10 @@
 <h1>Actividades</h1>
 <ul>
     {% for actividad in object_list %}
-        <li>{{ actividad.nombre }}</li>
+        
+        <li>
+            <a href="{{ actividad.id }}"> {{actividad.nombre}}</a>
+        </li>
     {% endfor %}
 </ul>
 {% endblock %}

@@ -3,7 +3,10 @@
 <h1>Apuntados</h1>
 <ul>
     {% for apuntado in object_list %}
-        <li>{{ apuntado.nombre }}</li>
+        
+    <li>
+        <a href="{{ apuntado.id }}"> {{apuntado.usuario}}</a>
+    </li>
     {% endfor %}
 </ul>
 {% endblock %}

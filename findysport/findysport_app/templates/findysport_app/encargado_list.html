@@ -3,7 +3,9 @@
 <h1>Encargados</h1>
 <ul>
     {% for encargado in object_list %}
-        <li>{{ encargado.nombre }}</li>
+    <li>
+    <a href="{{ encargado.id }}"> {{encargado.nombre_en}}</a>
+    </li>
     {% endfor %}
 </ul>
 {% endblock %}

@@ -3,7 +3,9 @@
 <h1>Locales</h1>
 <ul>
     {% for local in object_list %}
-        <li>{{ local.nombre_local }}</li>
+    <li>
+    <a href="{{ local.id }}"> {{local.nombre_local}}</a>
+    </li>   
     {% endfor %}
 </ul>
 {% endblock %}
