@@ -1,6 +1,8 @@
+
 {% extends "base.html" %}
 
 {% block content %}
+
 <h3>Formulario para la creación de una actividad:</h3>
 <form method="post">{% csrf_token %}
     {{ form.as_p }}

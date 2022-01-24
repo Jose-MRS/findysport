@@ -1,9 +1,17 @@
 {% extends "base.html" %}
 
 {% block content %}
-<br><br><br>
-    <h1>Detalles del encargado: {{object.nombre_en}}</h1>
-    <h2>Nombre encargado: {{object.nombre_en}}</h2>
-    <h2>Actividades del encargado: {{object.actividad}}</h2>
+<style>
+h2{
+    color: #3297a5
+}
+p{
+    font-size: 19px;
+}
+</style>
+
+    <h2>Detalles del encargado: {{object.nombre_en}}</h2>
+    <p>Nombre encargado: {{object.nombre_en}}</p>
+    <p>Actividades del encargado: {{object.actividad}}</p>
     
 {% endblock %}

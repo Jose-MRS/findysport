@@ -11,6 +11,9 @@ from findysport_app.models import Usuario, Actividad, Local, Encargado, Apuntado
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic.edit import CreateView
 
+def index(request):
+    return render(request, 'index.html')
+
 class UsuarioListView(ListView):
     model = Usuario   
 class ActividadListView(ListView):

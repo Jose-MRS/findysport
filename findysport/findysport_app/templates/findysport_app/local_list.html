@@ -1,6 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
-<h1>Locales</h1>
+<style>
+    h2{
+        color: #3297a5
+    }
+    </style>
+<h2>Lista de los locales dados de alta en la web.</h2>
 <ul>
     {% for local in object_list %}
     <li>

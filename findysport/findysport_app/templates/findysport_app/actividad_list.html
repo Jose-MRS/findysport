@@ -1,6 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
-<h1>Actividades</h1>
+<style>
+h2{
+    color: #3297a5
+}
+</style>
+<h2>Lista de todas las actividades de la web.</h2>
 <ul>
     {% for actividad in object_list %}
         

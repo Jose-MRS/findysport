@@ -1,10 +1,17 @@
 {% extends "base.html" %}
 
 {% block content %}
-<br><br><br>
-    <h1>Detalles de las personas apuntadas: {{object.nombre}}</h1>
-    <h2>Persona apuntada: {{object.usuario}}</h2>
-    <h2>Actividad a la que está apuntada: {{object.actividad}}</h2>
-    <h2>Grupo de la actividad: {{object.grupo}}</h2>
+<style>
+h2{
+    color: #3297a5
+}
+p{
+    font-size: 19px;
+}
+</style>
+    <h2>Detalles de: {{object.usuario}}</h2>
+    <p>Persona apuntada: {{object.usuario}}</p>
+    <p>Actividad a la que está apuntada: {{object.actividad}}</p>
+    <p>Grupo de la actividad: {{object.grupo}}</p>
     
 {% endblock %}

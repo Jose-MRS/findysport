@@ -1,6 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
-<h1>Usuarios</h1>
+<style>
+    h2{
+        color: #3297a5
+    }
+    </style>
+<h2>Lista de usuarios.</h2>
 <ul>
     {% for usuario in object_list %}
     <a href="{{ usuario.id }}"> {{usuario.edad}}</a>

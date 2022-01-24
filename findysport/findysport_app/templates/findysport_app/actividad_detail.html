@@ -1,12 +1,19 @@
 {% extends "base.html" %}
 
 {% block content %}
-<br><br><br>
-    <h1>Detalles de la actividad: {{object.nombre}}</h1>
-    <h2>Nombre actividad: {{object.nombre}}</h2>
-    <h2>Local donde se imparte: {{object.local}}</h2>
-    <h2>Tipo de actividad: {{object.tipo}}</h2>
-    <h2>Descripción de la actividad: {{object.descripcion}}</h2>
-    <h2>Creador de la actividad: {{object.creador}}</h2>
+<style>
+h2{
+    color: #3297a5
+}
+p{
+    font-size: 19px;
+}
+</style>
+    <h2>Detalles de la actividad: {{object.nombre}}</h2>
+
+    <p>Local donde se imparte: {{object.local}}</p>
+    <p>Tipo de actividad: {{object.tipo}}</p>
+    <p>Descripción de la actividad: {{object.descripcion}}</p>
+    <p>Creador de la actividad: {{object.creador}}</p>
     
 {% endblock %}

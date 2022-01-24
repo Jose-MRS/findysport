@@ -1,6 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
-<h1>Encargados</h1>
+<style>
+    h2{
+        color: #3297a5
+    }
+    </style>
+<h2>Lista de los encargados.</h2>
 <ul>
     {% for encargado in object_list %}
     <li>

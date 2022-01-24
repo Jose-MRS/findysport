@@ -1,9 +1,16 @@
 {% extends "base.html" %}
 
 {% block content %}
-<br><br><br>
-    <h1>Detalles del local: {{object.nombre}}</h1>
-    <h2>Nombre: {{object.nombre_local}}</h2>
-    <h2>Dirección: {{object.direccion_local}}</h2>
-    <h2>Ciudad: {{object.ciudad}}</h2>
+<style>
+h2{
+    color: #3297a5
+}
+p{
+    font-size: 19px;
+}
+</style>
+    <h2>Detalles del local: {{object.nombre}}</h2>
+    <p>Nombre: {{object.nombre_local}}</p>
+    <p>Dirección: {{object.direccion_local}}</p>
+    <p>Ciudad: {{object.ciudad}}</p>
 {% endblock %}

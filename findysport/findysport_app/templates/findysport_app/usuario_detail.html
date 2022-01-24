@@ -1,14 +1,21 @@
 {% extends "base.html" %}
 
 {% block content %}
-<br><br><br>
-    <h1>Detalles del usuario: {{object.edad}}</h1>
-    <h2>Nombre: a (mister jagger) {{object.edad}}</h2>
-    <h2>Edad: {{object.edad}}</h2>
-    <h2>Dirección: {{object.direccion}}</h2>
-    <h2>Código postal: {{object.cod_postal}}</h2>
-    <h2>Ciudad: {{object.ciudad}}</h2>
-    <h2>DNI: {{object.dni}}</h2>
-    <h2>Teléfono: {{object.telefono}}</h2>
+<style>
+h2{
+    color: #3297a5
+}
+p{
+    font-size: 19px;
+}
+</style>
+    <h2>Detalles del usuario: {{object.edad}}</h2>
+    <p>Nombre: a (mister jagger) {{object.edad}}</p>
+    <p>Edad: {{object.edad}}</p>
+    <p>Dirección: {{object.direccion}}</p>
+    <p>Código postal: {{object.cod_postal}}</p>
+    <p>Ciudad: {{object.ciudad}}</p>
+    <p>DNI: {{object.dni}}</p>
+    <p>Teléfono: {{object.telefono}}</p>
     
 {% endblock %}

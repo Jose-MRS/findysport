@@ -1,11 +1,18 @@
 {% extends "base.html" %}
 
 {% block content %}
-<br><br><br>
-    <h1>Detalles del grupo: {{object.nombre}}</h1>
-    <h2>Actividad del grupo: {{object.actividad}}</h2>
-    <h2>Nombre: {{object.nombre}}</h2>
-    <h2>Horario: {{object.horas}}</h2>
-    <h2>Encargado del grupo: {{object.encargado}}</h2>
-    <h2>Espacio del grupo: {{object.espacio}}/{{object.espacio_max}} max</h2>
+<style>
+h2{
+    color: #3297a5
+}
+p{
+    font-size: 19px;
+}
+</style>
+    <h2>Detalles del grupo: {{object.nombre}}</h2>
+    <p>Actividad del grupo: {{object.actividad}}</p>
+    <p>Nombre: {{object.nombre}}</p>
+    <p>Horario: {{object.horas}}</p>
+    <p>Encargado del grupo: {{object.encargado}}</p>
+    <p>Espacio del grupo: {{object.espacio}}/{{object.espacio_max}} max</p>
 {% endblock %}

@@ -1,6 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
-<h1>Grupos</h1>
+<style>
+    h2{
+        color: #3297a5
+    }
+    </style>
+<h2>Lista de los grupos existentes en la web.</h2>
 <ul>
     {% for grupo in object_list %}
     <li>
