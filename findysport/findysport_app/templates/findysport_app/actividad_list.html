@@ -10,7 +10,7 @@ h2{
     {% for actividad in object_list %}
         
         <li>
-            <a href="{{ actividad.id }}"> {{actividad.nombre}}</a>
+            <a href="{% url 'actividad-detail' actividad.pk %}">{{ actividad.nombre }}</a>
         </li>
     {% endfor %}
 </ul>

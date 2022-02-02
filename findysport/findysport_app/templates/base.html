@@ -31,18 +31,70 @@ body {
   background-color: #3297a5;
   color: white;
 }
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 17px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 </style>
 </head>
 <body>
 
 <div class="topnav">
-    <a class="active" href="http://127.0.0.1:8000/inicio/">Inicio</a>
-    <a href="http://127.0.0.1:8000/actividad/">Actividades</a>
-    <a href="http://127.0.0.1:8000/local">Locales</a>
-    <a href="http://127.0.0.1:8000/grupo">Grupos</a>
-    <a href="http://127.0.0.1:8000/apuntado">Apuntados</a>
-    <a href="http://127.0.0.1:8000/encargado">Encargados</a>
-    <a href="http://127.0.0.1:8000/usuario">Usuarios</a>
+    <a class="active" href="{% url 'inicio' %}">Inicio</a>
+    <a href="{% url 'actividad-list' %}">Actividades</a>
+    <a href="{% url 'local-list' %}">Locales</a>
+    <a href="{% url 'grupo-list' %}">Grupos</a>
+    <a href="{% url 'apuntado-list' %}">Apuntados</a>
+    <a href="{% url 'encargado-list' %}">Encargados</a>
+    <a href="{% url 'usuario-list' %}">Usuarios</a>
+    <div class="dropdown">
+      <button class="dropbtn">Crear 
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="{% url 'actividad-add' %}">Actividad</a>
+        <a href="{% url 'local-add' %}">Local</a>
+        <a href="{% url 'grupo-add' %}">Grupo</a>
+        <a href="{% url 'apuntado-add' %}">Apuntado</a>
+        <a href="{% url 'encargado-add' %}">Encargado</a>
+        <a href="{% url 'usuario-add' %}">Usuario</a>
+      </div>
+    </div>
 </div>
 
 <div style="padding-left:16px">

@@ -15,4 +15,6 @@ p{
     <p>Horario: {{object.horas}}</p>
     <p>Encargado del grupo: {{object.encargado}}</p>
     <p>Espacio del grupo: {{object.espacio}}/{{object.espacio_max}} max</p>
+    <p><a href= "{% url 'grupo-update' grupo.pk %}">Modificar</a></p>
+    <p><a href= "{% url 'grupo-delete' grupo.pk %}">Eliminar</a></p>
 {% endblock %}

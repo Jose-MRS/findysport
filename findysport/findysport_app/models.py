@@ -24,6 +24,8 @@ class Local(models.Model):
     ciudad = models.CharField(max_length=30)
     def __str__(self):
         return self.nombre_local
+    def get_absolute_url(self):
+        return reverse('local-detail', kwargs={'pk': self.pk})
     
 class Actividad(models.Model):
     local = models.ForeignKey(Local, on_delete=CASCADE)
@@ -33,12 +35,16 @@ class Actividad(models.Model):
     creador = models.CharField(max_length=20)
     def __str__(self):
         return self.nombre
+    def get_absolute_url(self):
+        return reverse('actividad-detail', kwargs={'pk': self.pk})
    
 class Encargado(models.Model):
     nombre_en = models.CharField(max_length=30)
     actividad = models.ManyToManyField(Actividad)
     def __str__(self):
         return self.nombre_en
+    def get_absolute_url(self):
+        return reverse('encargado-detail', kwargs={'pk': self.pk})
 class Grupo(models.Model):
     actividad = models.ForeignKey(Actividad, on_delete=CASCADE)
     nombre = models.CharField(max_length=30)
@@ -48,9 +54,13 @@ class Grupo(models.Model):
     espacio_max = models.IntegerField(default=15)
     def __str__(self):
         return self.nombre
+    def get_absolute_url(self):
+        return reverse('grupo-detail', kwargs={'pk': self.pk})
 
 class Apuntado(models.Model):
     usuario = models.ForeignKey(Usuario, on_delete=CASCADE)
     actividad = models.ManyToManyField(Actividad)
     grupo = models.ForeignKey(Grupo, on_delete=CASCADE)
+    def get_absolute_url(self):
+        return reverse('apuntado-detail', kwargs={'pk': self.pk})
 

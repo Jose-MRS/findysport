@@ -9,7 +9,8 @@
 <ul>
     {% for encargado in object_list %}
     <li>
-    <a href="{{ encargado.id }}"> {{encargado.nombre_en}}</a>
+    <!---<a href="{{ encargado.id }}"> {{encargado.nombre_en}}</a>--->
+    <a href="{{ encargado.get_absolute_url }}">{{ encargado.nombre_en }}</a>
     </li>
     {% endfor %}
 </ul>

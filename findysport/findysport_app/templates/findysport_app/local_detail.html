@@ -13,4 +13,6 @@ p{
     <p>Nombre: {{object.nombre_local}}</p>
     <p>Dirección: {{object.direccion_local}}</p>
     <p>Ciudad: {{object.ciudad}}</p>
+    <p><a href= "{% url 'local-update' local.pk %}">Modificar</a></p>
+    <p><a href= "{% url 'local-delete' local.pk %}">Eliminar</a></p>
 {% endblock %}

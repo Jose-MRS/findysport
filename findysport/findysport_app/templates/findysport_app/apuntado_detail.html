@@ -13,5 +13,6 @@ p{
     <p>Persona apuntada: {{object.usuario}}</p>
     <p>Actividad a la que está apuntada: {{object.actividad}}</p>
     <p>Grupo de la actividad: {{object.grupo}}</p>
-    
+    <p><a href= "{% url 'apuntado-update' apuntado.pk %}">Modificar</a></p>
+    <p><a href= "{% url 'apuntado-delete' apuntado.pk %}">Eliminar</a></p>
 {% endblock %}

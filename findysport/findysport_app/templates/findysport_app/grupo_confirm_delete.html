@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<style>
+h2{
+    color: #3297a5
+}
+p{
+    font-size: 19px;
+}
+</style>
+<form action='.' method='POST'>{% csrf_token %}
+    <h3>¿Estás seguro de querer borrar este grupo {{object.nombre}}?</h3>
+    <p><input type='submit' value='Sí' /> <a href='../'>No</a></p>
+</form>
+{% endblock %}

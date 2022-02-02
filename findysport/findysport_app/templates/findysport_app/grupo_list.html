@@ -9,7 +9,8 @@
 <ul>
     {% for grupo in object_list %}
     <li>
-    <a href="{{ grupo.id }}"> {{grupo.nombre}}</a>
+    <!---<a href="{{ grupo.id }}"> {{grupo.nombre}}</a>--->
+    <a href="{{ grupo.get_absolute_url }}">{{ grupo.nombre }}</a>
     </li>
     {% endfor %}
 </ul>

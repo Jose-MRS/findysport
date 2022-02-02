@@ -17,5 +17,7 @@ p{
     <p>Ciudad: {{object.ciudad}}</p>
     <p>DNI: {{object.dni}}</p>
     <p>Teléfono: {{object.telefono}}</p>
+    <p><a href= "{% url 'usuario-update' usuario.pk %}">Modificar</a></p>
+    <p><a href= "{% url 'usuario-delete' usuario.pk %}">Eliminar</a></p>
     
 {% endblock %}

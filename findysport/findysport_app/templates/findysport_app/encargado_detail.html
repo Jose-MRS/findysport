@@ -13,5 +13,6 @@ p{
     <h2>Detalles del encargado: {{object.nombre_en}}</h2>
     <p>Nombre encargado: {{object.nombre_en}}</p>
     <p>Actividades del encargado: {{object.actividad}}</p>
-    
+    <p><a href= "{% url 'encargado-update' encargado.pk %}">Modificar</a></p>
+    <p><a href= "{% url 'encargado-delete' encargado.pk %}">Eliminar</a></p>
 {% endblock %}

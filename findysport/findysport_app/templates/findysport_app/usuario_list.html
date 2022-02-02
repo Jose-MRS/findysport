@@ -8,7 +8,8 @@
 <h2>Lista de usuarios.</h2>
 <ul>
     {% for usuario in object_list %}
-    <a href="{{ usuario.id }}"> {{usuario.edad}}</a>
+    <!---<a href="{{ usuario.id }}"> {{usuario.edad}}</a>--->
+    <a href="{{ usuario.get_absolute_url }}">{{ usuario.name }}</a>
     {% endfor %}
 </ul>
 {% endblock %}

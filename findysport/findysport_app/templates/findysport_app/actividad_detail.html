@@ -15,5 +15,6 @@ p{
     <p>Tipo de actividad: {{object.tipo}}</p>
     <p>Descripción de la actividad: {{object.descripcion}}</p>
     <p>Creador de la actividad: {{object.creador}}</p>
-    
+    <p><a href= "{% url 'actividad-update' actividad.pk %}">Modificar</a></p>
+    <p><a href= "{% url 'actividad-delete' actividad.pk %}">Eliminar</a></p>
 {% endblock %}

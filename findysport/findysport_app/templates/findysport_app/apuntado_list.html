@@ -10,7 +10,8 @@
     {% for apuntado in object_list %}
         
     <li>
-        <a href="{{ apuntado.id }}"> {{apuntado.usuario}}</a>
+        <!---<a href="{{ apuntado.id }}"> {{apuntado.usuario}}</a>--->
+        <a href="{{ apuntado.get_absolute_url }}">{{ apuntado.nombre }}</a>
     </li>
     {% endfor %}
 </ul>

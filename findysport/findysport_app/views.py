@@ -123,6 +123,20 @@ class LocalDeleteView(DeleteView):
     model = Local
     success_url = reverse_lazy('local-list')
 #--------------------------------------------------------------------------------------
+class UsuarioCreateView(CreateView):
+    model = Usuario
+    fields = ['nombre_local', 'direccion_local', 'ciudad']
+    success_url = reverse_lazy('usuario-list')
+
+class UsuarioUpdateView(UpdateView):
+    model = Usuario
+    fields = ['nombre_local', 'direccion_local', 'ciudad']
+    success_url = reverse_lazy('usuario-list')
+
+class UsuarioDeleteView(DeleteView):
+    model = Usuario
+    success_url = reverse_lazy('usuario-list')
+#--------------------------------------------------------------------------------------
 '''class AuthorCreateView(LoginRequiredMixin, CreateView):
     model = Author
     fields = ['name']
